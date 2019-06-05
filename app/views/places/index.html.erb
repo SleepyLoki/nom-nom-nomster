@@ -5,3 +5,12 @@
     <p><%= place.description %></p><br />
   </div>
 <% end %>
+
+<br />
+<div class = "container pagination justify-content-center">
+  <%= paginate @places, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
+</div>
+
+<br />
+<br />
+<br />
