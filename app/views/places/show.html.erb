@@ -44,6 +44,7 @@
 <!-- Photos -->
 <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
   <%= f.input :caption %>
+  <%= f.input :picture %>
   <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
 <% end %>
 
@@ -76,11 +77,18 @@
 <br />
 
 <h1 class = "photos-title">Photos</h1>
-<% @place.photos.each do |photo| %>
-  <div class = "booyah-box col-xs-12 col-sm-6 offset-3">
-    <b><%= photo.caption %></b>
-  </div>
-<% end %>
+<br />
+<br />
+<div class = "row">
+  <% @place.photos.each do |photo| %>
+    <div class="col-xs-12 col-sm-6">
+      <%= image_tag photo.picture.url, :class => "picture-block" %>
+      <div class = "caption">
+        <%= photo.caption %>
+      </div>
+    </div>
+  <% end %>
+</div>
 
 <div class = "clear"></div>
 <br />
