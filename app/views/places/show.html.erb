@@ -75,6 +75,16 @@
 
 <br />
 
+<h1 class = "photos-title">Photos</h1>
+<% @place.photos.each do |photo| %>
+  <div class = "booyah-box col-xs-12 col-sm-6 offset-3">
+    <b><%= photo.caption %></b>
+  </div>
+<% end %>
+
+<div class = "clear"></div>
+<br />
+
 <div class = "col-10 offset-1">
   <h1 class = "float-left">Comments</h1>
   <!-- Button trigger modal -->
