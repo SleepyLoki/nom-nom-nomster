@@ -1,5 +1,4 @@
 # config/initializers/carrierwave.rb
-config.fog_public = false
 
 CarrierWave.configure do |config|
   config.fog_provider = 'fog/aws'                        # required
