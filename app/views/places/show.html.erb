@@ -44,14 +44,6 @@
 
 <div class = "clear"></div>
 
-<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-          <%= f.input :caption %>
-          <%= f.input :picture %>
-                    <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
-                          <% end %>
-
-
-
 <!-- Photos -->
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -63,8 +55,8 @@
         </button>
         <h4 class="modal-title" id="myModalLabel">Add a Photo</h4>
       </div>
-      <div class="modal-body">
         <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+          <div class="modal-body">
           <%= f.input :caption %>
           <%= f.input :picture %>
         </div>
