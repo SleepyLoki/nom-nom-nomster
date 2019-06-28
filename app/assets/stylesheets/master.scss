@@ -77,24 +77,29 @@ blockquote p {
 }
 
 .picture-block{
-  width: 100%;
-  border-radius: 8px;
-  border-style: double;
-  padding: 5px;
+  height: 600px;
+  width: 500px;
+  object-fit: contain;
+  border: 3px solid green;
+  background-color: #D6E1EA;
+  padding: 10px;
+  margin-left: 12.5%;
+  vertical-align: middle;
 }
 
 .caption{
   text-align: center;
+  font-size: 18px;
   font-style: italic;
   font-variant: small-caps;
   font-weight: bold;
   
   padding: 10px 20px;
-  border-bottom: 6px solid yellow;
+  border-bottom: 6px solid green;
   width: 50%;
   margin-left: 25%;
   margin-top: 5px;
-  background-color: rgba(76, 80, 175, 0.2);
+  background-color: rgba(76, 175, 80, 0.1);
   margin-bottom: 20px;
 }
 

@@ -59,6 +59,9 @@
           <div class="modal-body">
           <%= f.input :caption %>
           <%= f.input :picture %>
+          <%= f.check_box :is_cover %>
+          <%= f.label " Assign as Cover Photo?" %>
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -106,9 +109,11 @@
   <% @place.photos.each do |photo| %>
     <div class="col-xs-12 col-sm-6">
       <%= image_tag photo.picture.url, :class => "picture-block" %>
-      <div class = "caption">
-        <%= photo.caption %>
-      </div>
+      <% if photo.caption.present? %>
+        <div class = "caption">
+          <%= photo.caption %>
+        </div>
+      <% end %>
     </div>
   <% end %>
 </div>
