@@ -8,4 +8,17 @@ class Place < ApplicationRecord
 
   validates :name, :address, :description, presence: true
   validates :name, length: {minimum: 3}
+
+  # def self.search(search)
+  #   if search
+  #     find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+  #   else
+  #     find(:all)
+  # end
+
+  # def self.search(search)
+  #   if search
+  #     find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+  #   end
+  # end
 end

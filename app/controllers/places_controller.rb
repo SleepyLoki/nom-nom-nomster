@@ -4,6 +4,7 @@ class PlacesController < ApplicationController
   def index
     @places = Place.all.page(params[:page]).per(10)
     #@places = Place.order("name").page(params[:page]).per(5)
+    #@places = Place.search(params[:search])
   end
 
   def new
@@ -60,7 +61,7 @@ class PlacesController < ApplicationController
   private
 
   def place_params
-    params.require(:place).permit(:name, :description, :address)
+    params.require(:place).permit(:name, :description, :address, :search)
   end
 
 end
